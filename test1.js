@@ -16,15 +16,25 @@ setTimeout(function () {
 },4000);
 
 
-
+let arrowfunction = setTimeout( () => {
+    alert('2000 candidates have been imported');
+},4000);
 
 //3a. Cambiala a arrow function
-function greeting (name) {
+/*function greeting (name) {
  //3b. Imprime dinámicamente (con variables) un mensaje de Bienvenida al usario:
  //tal como : 'Hola Eduardo, buenos días!'  
  console.log();
+}*/
+
+//3a.
+let greeting = (nombre)=>{
+    return `Hola ${nombre}, buenos dias!`;
 }
+//3b.
 //---> llama a la función con tu nombre :
+console.log(greeting(Eduardo));
+
 
 //4. Que me imprime por consola?
 let array1 = ['x', 'y', 'z'];
@@ -39,9 +49,11 @@ const spanishCandidate = {
     likesSport: true
 }
 
+
 //const ......
 //console.log(variable)
-
+const {surname} = spanishCandidate;
+console.log(surname);
 /* 
 Tareas:
 1.Clonar este repo  <-- para clonar el repo, hacerlo por SSH --> aprender a cofigurar SSH en tu ordenador
