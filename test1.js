@@ -28,7 +28,7 @@ let arrowfunction = setTimeout( () => {
 }*/
 
 //3a.
-let greeting = (nombre)=>{
+let greeting = (nombre) => {
     return `Hola ${nombre}, buenos dias!`;
 }
 //3b.
