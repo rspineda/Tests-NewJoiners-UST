@@ -5,12 +5,15 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 
-export default function MainCard() {
-    const [nombre, setNombre] = React.useState('Santiago Loberto');
-    const handler = () => {
-        setTimeout(()=> setNombre('Gustavo Dazarin') ,2000);
-    }
+export default function MainCard(props) {
 
+  const [nombre, setNombre] = React.useState('Hola');
+    const handle = () => {
+        setNombre(props.newName);
+        console.log(props.newName);
+    }
+  
+  
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -34,7 +37,7 @@ export default function MainCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" onClick={handler}>
+        <Button size="small" color="primary" onClick={handle}>
           Share
         </Button>
       </CardActions>
