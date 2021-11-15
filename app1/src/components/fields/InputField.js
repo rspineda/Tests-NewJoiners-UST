@@ -56,7 +56,7 @@ export default function MultipleSelect(props) {
     );
   };*/
 
-    const handleSimpleChange = (event) => {
+    const selectNameHandler = (event) => {
 
       setPersonName(event.target.value);
 
@@ -71,7 +71,7 @@ export default function MultipleSelect(props) {
           id="demo-simple-select-filled"
          // multiple
           value={personName}
-          onChange={handleSimpleChange}
+          onChange={selectNameHandler}
           input={<OutlinedInput label="Name" />}
           MenuProps={MenuProps}
         >

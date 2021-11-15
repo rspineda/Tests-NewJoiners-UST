@@ -7,10 +7,9 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 
 export default function MainCard(props) {
 
-  const [nombre, setNombre] = React.useState('Hola');
+  const [name, setCardName] = React.useState('Name');
     const handle = () => {
-        setNombre(props.newName);
-        console.log(props.newName);
+      setCardName(props.newName);
     }
   
   
@@ -32,7 +31,7 @@ export default function MainCard(props) {
             to 2nd level of Technical Support for Digital Products. Assignment Group is monitored on 24x5 basis.
           </Typography>
           <div>
-              {nombre}
+              {name}
           </div>
         </CardContent>
       </CardActionArea>

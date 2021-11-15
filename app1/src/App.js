@@ -6,18 +6,18 @@ import InputField from './components/fields/InputField';
 
 function App() {
 
-  const [newState, setNewState] = React.useState('Eduardo');
+  const [displayedName, setDisplayedName] = React.useState('');
    const getPersonName = (enteredPersonName) => {
     const personName = enteredPersonName;
     console.log(personName);
-    setNewState(enteredPersonName);
+    setDisplayedName(enteredPersonName);
   }
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <MainCard newName = {newState}></MainCard>
+        <MainCard newName = {displayedName}></MainCard>
         <br></br>
         <InputField getNewPersonName = {getPersonName} >nombre</InputField>
         
