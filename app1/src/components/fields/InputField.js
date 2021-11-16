@@ -6,6 +6,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
+
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
 const MenuProps = {
@@ -32,18 +33,20 @@ const names = [
 
 function getStyles(name, personName, theme) {
   return {
+
     fontWeight:
-      personName.indexOf(name) === -1
+    personName.indexOf(name) === -1
         ? theme.typography.fontWeightRegular
         : theme.typography.fontWeightMedium,
   };
 }
 
-export default function MultipleSelect() {
+export default function MultipleSelect(props) {
   const theme = useTheme();
   const [personName, setPersonName] = React.useState([]);
-
-  const handleChange = (event) => {
+  props.getNewPersonName(personName);
+  
+ /* const handleChange = (event) => {
     const {
       target: { value },
     } = event;
@@ -51,18 +54,24 @@ export default function MultipleSelect() {
       // On autofill we get a the stringified value.
       typeof value === 'string' ? value.split(',') : value,
     );
-  };
+  };*/
+
+    const selectNameHandler = (event) => {
+
+      setPersonName(event.target.value);
+
+    };
 
   return (
     <div>
-      <FormControl sx={{ m: 1, width: 300 }}>
-        <InputLabel id="demo-multiple-name-label">Name</InputLabel>
+      <FormControl sx={{ bgcolor: 'primary.main', m: 1, width: 300 }}>
+        <InputLabel id="demo-simple-select-filled-label">Name</InputLabel>
         <Select
-          labelId="demo-multiple-name-label"
-          id="demo-multiple-name"
-          multiple
+          labelId="demo-simple-select-filled-label"
+          id="demo-simple-select-filled"
+         // multiple
           value={personName}
-          onChange={handleChange}
+          onChange={selectNameHandler}
           input={<OutlinedInput label="Name" />}
           MenuProps={MenuProps}
         >

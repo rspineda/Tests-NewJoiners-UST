@@ -5,12 +5,14 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 
-export default function MainCard() {
-    const [nombre, setNombre] = React.useState('Santiago Loberto');
-    const handler = () => {
-        setTimeout(()=> setNombre('Gustavo Dazarin') ,2000);
-    }
+export default function MainCard(props) {
 
+  const [name, setCardName] = React.useState('Name');
+    const handle = () => {
+      setCardName(props.newName);
+    }
+  
+  
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -29,12 +31,12 @@ export default function MainCard() {
             to 2nd level of Technical Support for Digital Products. Assignment Group is monitored on 24x5 basis.
           </Typography>
           <div>
-              {nombre}
+              {name}
           </div>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" onClick={handler}>
+        <Button size="small" color="primary" onClick={handle}>
           Share
         </Button>
       </CardActions>
