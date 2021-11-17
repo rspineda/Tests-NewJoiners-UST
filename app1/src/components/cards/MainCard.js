@@ -3,19 +3,12 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import {CardActionArea} from '@mui/material';
 
-export default function MainCard(props) {
-
-  const [BrowserDisplayedName, setBrowserDisplayedName] = React.useState('Name');
-    
-  const handleBrowserName = () => {
-      setBrowserDisplayedName(props.newName);
-    }
-  
+export default function MainCard({newName, displayedName}) {
   
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} >
       <CardActionArea>
         <CardMedia
           component="img"
@@ -32,15 +25,10 @@ export default function MainCard(props) {
             to 2nd level of Technical Support for Digital Products. Assignment Group is monitored on 24x5 basis.
           </Typography>
           <div>
-              {BrowserDisplayedName}
-          </div>
+            {displayedName}
+            </div>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary" onClick={handleBrowserName}>
-          Share
-        </Button>
-      </CardActions>
     </Card>
   );
 }
