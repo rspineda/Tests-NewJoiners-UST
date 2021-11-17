@@ -7,9 +7,10 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 
 export default function MainCard(props) {
 
-  const [name, setCardName] = React.useState('Name');
-    const handle = () => {
-      setCardName(props.newName);
+  const [BrowserDisplayedName, setBrowserDisplayedName] = React.useState('Name');
+    
+  const handleBrowserName = () => {
+      setBrowserDisplayedName(props.newName);
     }
   
   
@@ -31,12 +32,12 @@ export default function MainCard(props) {
             to 2nd level of Technical Support for Digital Products. Assignment Group is monitored on 24x5 basis.
           </Typography>
           <div>
-              {name}
+              {BrowserDisplayedName}
           </div>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" onClick={handle}>
+        <Button size="small" color="primary" onClick={handleBrowserName}>
           Share
         </Button>
       </CardActions>

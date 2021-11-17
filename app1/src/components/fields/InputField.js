@@ -43,7 +43,7 @@ function getStyles(name, personName, theme) {
 
 export default function MultipleSelect(props) {
   const theme = useTheme();
-  const [personName, setPersonName] = React.useState([]);
+  const [personName, setNewPersonName] = React.useState([]);
   props.getNewPersonName(personName);
   
  /* const handleChange = (event) => {
@@ -58,7 +58,7 @@ export default function MultipleSelect(props) {
 
     const selectNameHandler = (event) => {
 
-      setPersonName(event.target.value);
+      setNewPersonName(event.target.value);
 
     };
 

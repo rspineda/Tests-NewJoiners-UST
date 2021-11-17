@@ -8,8 +8,6 @@ function App() {
 
   const [displayedName, setDisplayedName] = React.useState('');
    const getPersonName = (enteredPersonName) => {
-    const personName = enteredPersonName;
-    console.log(personName);
     setDisplayedName(enteredPersonName);
   }
 
