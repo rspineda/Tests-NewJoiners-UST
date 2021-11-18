@@ -8,18 +8,21 @@ function App() {
 
   const [displayedName, setDisplayedName] = React.useState('');
    const getPersonName = (enteredPersonName) => {
-    const personName = enteredPersonName;
-    console.log(personName);
     setDisplayedName(enteredPersonName);
   }
+
+
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <MainCard newName = {displayedName}></MainCard>
+        <div>{displayedName}</div>
+        <MainCard displayedName={displayedName}></MainCard>
         <br></br>
-        <InputField getNewPersonName = {getPersonName} >nombre</InputField>
+        <InputField getNewPersonName = {getPersonName} 
+        displayedName={displayedName} 
+        setDisplayedName={setDisplayedName}>nombre</InputField>
         
       </header>
     </div>
