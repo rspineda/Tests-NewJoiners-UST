@@ -9,12 +9,9 @@ import Button from '@mui/material/Button';
 import UsersListCard from './components/cards/UsersListCard';
 
 function App() {
-  
- // const [isLoggedIn,setIsLoggedIn] = useState(false);
-  //const [displayedId, setDisplayedId] = useState('');
+
   const [displayedName, setDisplayedName] = useState('');
   const [usersTasks, setUsersTasks] = useState([]);
-
   const getPersonName = (enteredPersonName) => {
     setDisplayedName(enteredPersonName);
   }
@@ -25,13 +22,6 @@ function App() {
       setUsersTasks(res.data);
     });
   }
-
-  /*useEffect(()=>{
-    const storedUserInfo = localStorage.getItem('isLoggedIn');
-
-    if(storedUserInfo===true) {setIsLoggedIn(true);}
-
-  },[])*/
 
   return (
     <div className="App">
