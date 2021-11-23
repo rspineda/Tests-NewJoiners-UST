@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 import { useTheme } from '@mui/material/styles';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
@@ -43,13 +43,12 @@ function getStyles(name, personName, theme) {
 
 export default function MultipleSelect({displayedName,setDisplayedName,getNewPersonName}) {
   const theme = useTheme();
-  const [labelDisplayed, setLabelDisplayed] = React.useState('Name');
-  const [personName, setNewPersonName] = React.useState([]);
+  const [labelDisplayed, setLabelDisplayed] = useState('Name');
+  const [personName, setNewPersonName] = useState([]);
 
   getNewPersonName(personName);
   
     const selectNameHandler = (event) => {
-
       setNewPersonName(event.target.value);
       setDisplayedName(event.target.value);
       setLabelDisplayed('');
