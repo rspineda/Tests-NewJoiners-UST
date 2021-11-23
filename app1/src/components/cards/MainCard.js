@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {CardActionArea} from '@mui/material';
 
-export default function MainCard({newName, displayedName}) {
+export default function MainCard({displayedName}) {
   
   return (
     <Card sx={{ maxWidth: 345 }} >
@@ -25,7 +25,7 @@ export default function MainCard({newName, displayedName}) {
             to 2nd level of Technical Support for Digital Products. Assignment Group is monitored on 24x5 basis.
           </Typography>
           <div>
-            {displayedName}
+          {displayedName}
             </div>
         </CardContent>
       </CardActionArea>
