@@ -19,17 +19,18 @@ const MenuProps = {
 };
 
 const names = [
-  'Santiago Laberinto',
-  'Gustavo Dazarin',
-  'Paul Paupin',
-  'Ronald Piripin',
-  'Felipe Martelin',
-  'Joselito Menganito',
-  'Jose Francisco PalosColegas',
-  'Eduardo Poziacaso',
-  'Hari babulino',
-  'Hassan Sullilla',
+  {Name:'Santiago Laberinto',id:1},
+  {Name:'Gustavo Dazarin',id:2},
+  {Name:'Paul Paupin',id:3},
+  {Name:'Ronald Piripin',id:4},
+  {Name:'Felipe Martelin',id:5},
+  {Name:'Joselito Menganito',id:6},
+  {Name:'Jose Francisco PalosColegas',id:7},
+  {Name:'Eduardo Poziacaso',id:8},
+  {Name:'Hari babulino',id:9},
+  {Name:'Hassan Sullilla',id:10},
 ];
+
 
 function getStyles(name, personName, theme) {
   return {
@@ -41,23 +42,23 @@ function getStyles(name, personName, theme) {
   };
 }
 
-export default function MultipleSelect({displayedName,setDisplayedName,getNewPersonName}) {
+export default function MultipleSelect({displayedName,setDisplayedName,getNewPersonName}){
   const theme = useTheme();
-  const [labelDisplayed, setLabelDisplayed] = useState('Name');
-  const [personName, setNewPersonName] = useState([]);
-
-  getNewPersonName(personName);
+  const [labelNameDisplayed, setLabelNameDisplayed] = useState('Name');
+  const [personName, setNewPersonName] = useState(''); 
   
-    const selectNameHandler = (event) => {
+  const selectNameHandler = (event) => {
       setNewPersonName(event.target.value);
       setDisplayedName(event.target.value);
-      setLabelDisplayed('');
+      setLabelNameDisplayed('');
     };
+
+    getNewPersonName(personName);
 
   return (
     <div>
       <FormControl sx={{ bgcolor: 'primary.main', m: 1, width: 300 }}>
-        <InputLabel id="demo-simple-select-filled-label">{labelDisplayed}</InputLabel>
+        <InputLabel id="demo-simple-select-filled-label">{labelNameDisplayed}</InputLabel>
         <Select
           labelId="demo-simple-select-filled-label"
           id="demo-simple-select-filled"
@@ -68,11 +69,11 @@ export default function MultipleSelect({displayedName,setDisplayedName,getNewPer
         >
           {names.map((name) => (
             <MenuItem
-              key={name}
-              value={name}
-              style={getStyles(name, personName, theme)}
+              key={name.Name}
+              value={name.Name}
+              style={getStyles(name.Name, personName, theme)}
             >
-              {name}
+              {name.Name}
             </MenuItem>
           ))}
         </Select>

@@ -5,10 +5,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {CardActionArea} from '@mui/material';
 
-export default function MainCard({displayedName}) {
+export default function MainCard({oneUserTask}) {
+  const task =[oneUserTask];
   
   return (
-    <Card sx={{ maxWidth: 345 }} >
+    task.map(taskAux => 
+    <Card sx={{ maxWidth: 345 }} key = {task.id}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -25,10 +27,10 @@ export default function MainCard({displayedName}) {
             to 2nd level of Technical Support for Digital Products. Assignment Group is monitored on 24x5 basis.
           </Typography>
           <div>
-          {displayedName}
+          {taskAux.title}
             </div>
         </CardContent>
       </CardActionArea>
-    </Card>
+    </Card>)
   );
 }

@@ -4,6 +4,8 @@ export const getUsersTaskData = async () => {
     return await axios.get('https://jsonplaceholder.typicode.com/todos');
 }
 
-//otra funcion ....../1
 
-//ojo, no me vale mas de 1 función
+    export const getOneUsersTaskData  = async (props) =>{
+    
+        return await axios.get(`https://jsonplaceholder.typicode.com/todos/${props}`);
+    }
