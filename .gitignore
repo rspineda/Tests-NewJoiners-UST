@@ -2,7 +2,9 @@
 
 # dependencies
 /app1/node_modules
-
+/app2/node_modules
+/app2/dist
+/app2/.cache
 
 # misc
 /app1/.DS_Store

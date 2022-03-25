@@ -1,0 +1,17 @@
+{
+  "name": "app2",
+  "version": "1.0.0",
+  "description": "fetch-data-and-render-dom",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "author": "Ronald Pineda",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}
