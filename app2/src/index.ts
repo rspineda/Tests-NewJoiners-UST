@@ -40,6 +40,21 @@ const url = 'https://jsonplaceholder.typicode.com/todos/';
 }
 */
 
+const url2 = 'https://jsonplaceholder.typicode.com/todos/';
+
+axios.get(url2)
+.then((res) => {
+  //console.log(res.data);
+  const response = res.data;
+   const response2 = response.map((element) => {
+    return {
+      userId : element.userId,
+      id : element.id,
+      title: 'Ronald es un tío majete'
+    }
+  });
+  console.log(response2);
+}).catch((err)=> {console.log(err)});
 
 
 
