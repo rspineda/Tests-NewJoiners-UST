@@ -39,8 +39,8 @@ saludoMiembro(newMember);
 
 //6. Dado el array celsius, crea un nuevo array (farenheit) que contenga los los elementos del array celsius pero en formato fahrenheit
 //Para pasar de celsius a farenheit: F = (C * 9/5) + 32 
-const celsius = [20, 23, 12, 30, 22]
-const farenheit = celsius.map(elem => (elem*(9/5)) +32)
+const celsiu = [20, 23, 12, 30, 22]
+const farenheit = celsiu.map(elem => (elem*(9/5)) +32)
 console.log(farenheit)
 
 
