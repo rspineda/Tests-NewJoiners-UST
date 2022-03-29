@@ -7,7 +7,7 @@ const newMembers = ['Edu', 'Pil']
 //Unelos en un solo array e imprímelo por consola: 
 
 const members1 =  [...members,...newMembers];
-console.log(members1)
+console.log(members1);
 
 
 //2. Crea una función que demuestre el uso de un let partiendo de la varible dada.
@@ -15,10 +15,10 @@ const number = 5;
 
 const myFunction =() => {
     let number = 3;
-    console.log(number)
+    console.log(number);
 }
 myFunction();
-console.log(number)
+console.log(number);
 
 //3. / 4. / 5. Dado el objeto newMember --> Crea una función que me imprima por consola el nombre del nuevo miembro
 // con un saludo ameno como: 'Hola Pil que tal  estas' (utilizando arrow function, destructuring y template strings)
@@ -31,7 +31,7 @@ const newMember = {
 
 const  saludoMiembro =(newMember) =>{
     const {name} = newMember
-    //console.log(name)
+    console.log(name)
     console.log(`Hola ${name} que tal estas`)
 
 }
