@@ -1,8 +1,11 @@
 import * as React from 'react';
 
-const Saludo = () => {
+const Saludo = props => {
+  
+
   return (
-    <div>Hola</div>
+    
+    <div>Hola {props.nombre} usted trabaja en {props.company}</div>
   )
 }
 
