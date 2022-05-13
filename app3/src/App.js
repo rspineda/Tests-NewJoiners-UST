@@ -3,12 +3,17 @@ import './App.css';
 import Saludo from './components/Saludo';
 
 const  App = () => {
+  let nombre = "Pilar";
+  setTimeout(() => {
+    nombre = "Pilarica";
+
+  },3000)
   return (
     <div className="App">
+      <Saludo nombre={nombre} company= "Adecco"/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
-      <Saludo />
     </div>
   );
 }
